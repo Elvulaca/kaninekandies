@@ -1,0 +1,238 @@
+/* clickable images */
+
+.dogs {
+    margin-top: 300px;
+    /* margin-left: 450px; */
+}
+
+
+/* Change the link color to #111 (black) on hover */
+
+li a:hover {
+    background-color: #111;
+}
+
+.active {
+    background-color: #04AA6D;
+}
+
+.dog1 {
+    width: 242px;
+    height: 150px;
+}
+
+.dog2 {
+    width: 242px;
+    height: 150px;
+}
+
+.dog3 {
+    width: 242px;
+    height: 150px;
+}
+
+
+/* start card */
+
+.cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin: 37px auto 0;
+    width: calc(280px * 4);
+    margin-top: 300px;
+}
+
+.card {
+    box-shadow: 0 3px 10px 0 #aaa;
+    cursor: pointer;
+    height: 280px;
+    position: relative;
+    width: 243px;
+}
+
+.card h2 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.card.visited {
+    box-shadow: 0 3px 10px 2px #444;
+}
+
+
+/* end card */
+
+* {
+    position: relative;
+    box-sizing: border-box;
+}
+
+.iframely-embed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 50;
+    background: white;
+}
+
+#app {
+    /* // opacity: 0 !important;
+    // visibility: hidden; */
+    z-index: 100;
+    /* &:hover {
+        opacity: 0.5;
+    } */
+}
+
+#app {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    padding-bottom: 4vmin;
+    height: 90vh;
+    width: 100%;
+    background: #ede8e2;
+    color: #3a3535;
+}
+
+body {
+    display: grid;
+    padding: 3vmin;
+    background: #e6ded7;
+}
+
+.kanine,
+.mozart {
+    animation: outer-left 1s 1s cubic-bezier(0.5, 0, 0.1, 1) both;
+    /* // outline: 1px solid red; */
+}
+
+
+/* // [class*='inner'] {
+//   outline: 1px solid blue;
+// } */
+
+.title-inner {
+    display: inline-block;
+    animation: inner-left 1s 1s ease both;
+}
+
+.kk-inner {
+    display: inline-block;
+    animation: inner-left 1s 1s ease both, text-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
+}
+
+.kk2-inner {
+    animation: text-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
+}
+
+.title {
+    animation: outer-left 1s 1s ease both;
+}
+
+.kanine {
+    /* // start
+    >.kk-inner {
+        display: inline-block;
+    } */
+}
+
+.mozart {
+    display: inline-block;
+}
+
+.image {
+    grid-row: 1;
+    grid-column: 2;
+    margin-left: -2rem;
+    /* opacity: 0.7; */
+    animation: image-in 1s cubic-bezier(0.5, 0, 0.1, 1) 2s backwards;
+    @keyframes image-in {
+        from {
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        }
+        to {
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        }
+    }
+    /* img {
+        /* display: block; */
+    width: 100%;
+    height: auto;
+}
+
+*/
+/* // Replay animation! */
+
+body:active * {
+    animation: none !important;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Prata&display=swap");
+.title {
+    padding-left: 1em;
+    grid-column: 1 / -1;
+    grid-row: 1;
+    font-family: "Prata", serif;
+    font-size: 8vw;
+    width: 100%;
+    z-index: 2;
+    /* start>.title-inner {
+        display: inline-block;
+    } */
+}
+
+@keyframes text-clip {
+    from {
+        clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+    }
+    to {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+}
+
+@keyframes outer-left {
+    from {
+        transform: translateX(50%);
+    }
+    to {
+        transform: none;
+    }
+}
+
+@keyframes inner-left {
+    from {
+        transform: translateX(-50%);
+    }
+    to {
+        transform: none;
+    }
+}
+
+
+/* start card css */
+
+@media (max-width: 1100px) {
+    .cards {
+        grid-template-columns: 1fr 1fr;
+        width: calc(280px * 2);
+    }
+    .card {
+        margin: 0 auto 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .cards {
+        display: block;
+        width: 100vw;
+    }
+    .card {
+        margin: 0 auto 2rem;
+    }
+}
+
+
+/* end card css */

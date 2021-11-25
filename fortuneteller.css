@@ -1,0 +1,86 @@
+body {
+    background-image: url(https://media.giphy.com/media/dw2yCF4MhcNmSMgpfe/giphy.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+button {
+    font-size: 40px;
+    background-color: transparent;
+    border: 5px solid aqua;
+    color: black;
+    margin-left: 600px;
+    font-family: 'Romanesco', cursive;
+}
+
+h2#btn {
+    color: black;
+    font-size: 48px;
+    text-align: center;
+    margin-top: 300px;
+}
+
+h1,
+h2 {
+    color: #eeee;
+    font-family: 'Romanesco', cursive;
+    font-size: 40px;
+    text-align: center;
+}
+
+#container {
+    border: 2px dotted white;
+    background-color: orchid;
+    margin: 20px;
+    padding: 10px;
+}
+
+#fortune {
+    border: 2px solid white;
+    background-color: darkslateblue;
+    padding: 20px;
+}
+
+
+/* start style for icon bar */
+
+#mySidenav a {
+    position: absolute;
+    left: -50px;
+    transition: 0.3s;
+    padding: 18px;
+    width: 80px;
+    text-decoration: yellow;
+    font-size: 15px;
+    color: whitesmoke;
+    border-radius: 0 5px 5px 0;
+    font: italic bold;
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+#mySidenav a:hover {
+    left: 0;
+}
+
+#kaninekandies {
+    top: 22px;
+    background-color: rgb(46, 45, 45);
+    text-align: left;
+}
+
+#fortuneteller {
+    top: 80px;
+    background-color: rgb(46, 45, 45);
+    text-align: left;
+}
+
+@-webkit-keyframes glow {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #c5e416, 0 0 40px #0fe70f, 0 0 50px #289607, 0 0 60px #0ac523, 0 0 70px #e60073;
+    }
+    to {
+        text-shadow: 0 0 20px #fff, 0 0 30px #f0e32b, 0 0 40px #e9ec37, 0 0 50px #75f024, 0 0 60px #10a117, 0 0 70px #74e926, 0 0 80px #ff4da6;
+    }
+}
